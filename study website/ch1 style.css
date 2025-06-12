@@ -1,0 +1,492 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F6F8; /* Soft Light Gray background */
+    color: #333333; /* Dark Gray for general text for readability */
+    line-height: 1.6; /* Improved readability for all text */
+    scroll-behavior: smooth; /* Smooth scrolling for internal links */
+}
+
+/* Container for consistent content width and centering */
+.container {
+    max-width: 1100px; /* Wider content area for a more spacious feel */
+    margin: 0 auto; /* Centers the container */
+    padding: 0 20px; /* Horizontal padding for smaller screens */
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #2C3E50; /* Deep Charcoal Blue */
+    color: #FDFDFD; /* Crisp White text */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* More pronounced shadow for premium feel */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    width: 90%; /* Adjust container width for header */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Slightly more space between nav items */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #FDFDFD; /* Crisp White */
+    text-decoration: none;
+    font-weight: 500; /* Montserrat weight */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498DB; /* Vibrant Blue accent on hover */
+}
+
+/* Hero Section Styles (Homepage Specific) */
+.hero-section {
+    background: linear-gradient(135deg, #EBF5FF, #D0E0FF); /* Soft blue gradient for hero */
+    padding: 100px 0; /* More vertical padding */
+    text-align: center;
+    color: #2C3E50; /* Deep Charcoal Blue text */
+    box-shadow: inset 0 -5px 10px rgba(0,0,0,0.05); /* Subtle bottom shadow */
+}
+
+.hero-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2em; /* Larger, more impactful heading */
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 40px auto; /* Centered and more space below */
+    color: #555555; /* Medium Gray for description */
+}
+
+.hero-buttons .btn {
+    margin: 0 15px; /* Spacing between hero buttons */
+    padding: 15px 30px; /* Larger buttons */
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px; /* Slightly rounder buttons */
+}
+
+.hero-buttons .btn-primary {
+    background-color: #3498DB; /* Vibrant Blue */
+    color: #FDFDFD;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3); /* Subtle shadow for primary button */
+}
+
+.hero-buttons .btn-primary:hover {
+    background-color: #2980B9; /* Darker blue on hover */
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+}
+
+.hero-buttons .btn-secondary {
+    background-color: #ECF0F1; /* Light Gray */
+    color: #2C3E50; /* Deep Charcoal Blue */
+    border: 1px solid #BDC3C7; /* Subtle border */
+}
+
+.hero-buttons .btn-secondary:hover {
+    background-color: #D5DBDB; /* Darker gray on hover */
+}
+
+/* Features Section Styles (Homepage Specific) */
+.features-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #FDFDFD; /* Crisp White background */
+}
+
+.features-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #2C3E50; /* Deep Charcoal Blue */
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Space between features */
+}
+
+.feature-item {
+    background-color: #FDFDFD;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.feature-item .icon {
+    font-size: 3.5em; /* Larger icons */
+    color: #3498DB; /* Vibrant Blue */
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 0.95em;
+    color: #555555;
+}
+
+/* General Content Area Styles (applies to chapter overviews and common sections) */
+.content-area {
+  padding: 40px 5%; /* General padding for content outside hero */
+}
+
+.chapter-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.concept-section {
+  margin-bottom: 40px;
+}
+
+.concept-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2C3E50; /* Deep Charcoal Blue */
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Grid for chapter cards (for chapter overview pages) */
+.sst-chapters-grid, .science-chapters-grid { /* Applies to both SST and Science overview grids */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px; /* Consistent gap */
+  padding: 0;
+}
+
+.chapter-card {
+  background-color: #FDFDFD; /* Crisp White */
+  border: 1px solid #E9ECEF; /* Light Gray border */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Lighter shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.chapter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* More prominent hover shadow */
+}
+
+.chapter-card-header {
+  background-color: #2C3E50; /* Deep Charcoal Blue */
+  color: #FDFDFD;
+  padding: 15px 20px;
+  font-size: 1.3em;
+  font-weight: 700; /* Bold header */
+}
+
+.chapter-card-body {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.chapter-card-body p {
+  font-size: 0.95em;
+  color: #555555; /* Medium Gray text */
+  margin-bottom: 15px;
+}
+
+.chapter-status {
+  font-size: 0.85em;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.status-ready {
+  background-color: #E8F5E9; /* Light Green */
+  color: #2E7D32; /* Dark Green */
+}
+
+.status-inprogress {
+  background-color: #FFF3E0; /* Light Orange */
+  color: #EF6C00; /* Dark Orange */
+}
+
+.chapter-card-footer {
+  background-color: #F8F9FA; /* Soft White */
+  padding: 15px 20px;
+  text-align: right;
+  border-top: 1px solid #E9ECEF; /* Light Gray border */
+}
+
+/* General Button Styles (for common buttons) */
+.btn {
+  background-color: #3498DB; /* Vibrant Blue */
+  color: #FDFDFD;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px; /* Slightly larger default buttons */
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block; /* Ensure padding works */
+}
+
+.btn:hover {
+  background-color: #2980B9; /* Darker blue on hover */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.next-steps {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.next-steps h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2C3E50;
+  font-size: 1.8em;
+  margin-bottom: 25px;
+}
+
+.cta-buttons .primary-btn {
+  background-color: #3498DB;
+  color: white;
+  border: none;
+  margin: 0 10px;
+}
+
+.cta-buttons .primary-btn:hover {
+  background-color: #2980B9;
+}
+
+.cta-buttons .secondary-btn {
+  background-color: #ECF0F1; /* Light Gray */
+  color: #2C3E50; /* Dark Charcoal Blue */
+  border: 1px solid #BDC3C7;
+  margin: 0 10px;
+}
+
+.cta-buttons .secondary-btn:hover {
+  background-color: #D5DBDB;
+}
+
+/* Specific styles to match chapter2.html's concept boxes and equation blocks */
+.concept-box {
+    background-color: #eaf7f7; /* Light cyan background */
+    border-left: 5px solid #009688; /* Teal border */
+    padding: 15px 20px; /* Reduced padding to match chapter2.html */
+    margin-bottom: 25px;
+    border-radius: 8px; /* Slightly less rounded */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Lighter shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.concept-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Adjusted hover shadow */
+}
+
+.concept-box h4 {
+    color: #00796b; /* Darker teal for sub-headings in boxes */
+    margin-top: 0;
+    margin-bottom: 10px; /* Adjusted margin to match chapter2.html */
+    /* Kept font-size: 1.3em; and font-family: 'Montserrat', sans-serif; from previous ch1 style.css */
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.equation-block {
+    background-color: #ffffff; /* White background for code blocks */
+    padding: 15px; /* Adjusted padding to match chapter2.html */
+    border-left: 3px solid #009688; /* Teal border */
+    border-radius: 6px;
+    margin-top: 15px; /* Adjusted margin to match chapter2.html */
+    margin-bottom: 15px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9em;
+    overflow-x: auto;
+    color: #444444;
+}
+
+.reaction-condition {
+    font-size: 0.8em;
+    vertical-align: super;
+    font-weight: bold;
+    color: #555555; /* Medium gray for conditions */
+}
+
+
+/* Footer Styles */
+.main-footer {
+    background-color: #2C3E50; /* Deep Charcoal Blue */
+    color: #FDFDFD; /* Crisp White */
+    text-align: center;
+    padding: 30px; /* More padding for a substantial footer */
+    margin-top: 60px; /* More space above footer */
+}
+
+.main-footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.main-footer ul li a {
+    color: #FDFDFD;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer ul li a:hover {
+    color: #3498DB;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        align-items: flex-start; /* Align header items to start for stacked layout */
+    }
+    .main-header h1 {
+        margin-bottom: 10px; /* Space below title */
+    }
+    .main-header nav ul {
+        flex-direction: column;
+        align-items: flex-start; /* Align nav items to start */
+        margin-top: 15px;
+    }
+    .main-header nav ul li {
+        margin: 5px 0;
+    }
+    .menu-toggle {
+      display: block; /* Hamburger icon visible on mobile */
+      position: absolute; /* Position relative to header */
+      right: 20px;
+      top: 25px;
+      font-size: 1.8em;
+      cursor: pointer;
+      color: #FDFDFD;
+    }
+    .main-header nav {
+        display: none; /* Hide nav by default on mobile */
+        width: 100%;
+        background-color: #2C3E50; /* Match header background */
+        box-shadow: none; /* Remove shadow when expanded */
+        padding: 0; /* Remove padding here, add to list items */
+        position: static; /* No absolute positioning when active */
+    }
+    .main-header nav.active { /* Class added by JS to show nav */
+        display: flex;
+        flex-direction: column;
+        position: absolute; /* Position over content */
+        top: 75px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: #2C3E50;
+        z-index: 999; /* Below header */
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        align-items: center;
+    }
+    .main-header nav.active ul {
+        width: 100%; /* Make list full width */
+        align-items: center; /* Center list items */
+    }
+    .main-header nav.active ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .content-area {
+        padding: 20px 3%;
+    }
+    .hero-section {
+        padding: 60px 0;
+    }
+    .hero-section h2 {
+        font-size: 2.2em;
+    }
+    .hero-section p {
+        font-size: 1em;
+    }
+    .hero-buttons .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+        margin: 10px 5px; /* More vertical stack for buttons */
+    }
+    .feature-grid {
+        grid-template-columns: 1fr; /* Stack features vertically on small screens */
+    }
+    .feature-item {
+        padding: 20px;
+    }
+    .chapter-card-header {
+        font-size: 1.1em;
+    }
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* Adjustments for even smaller screens */
+@media (max-width: 480px) {
+    .main-header h1 {
+        font-size: 1.5em;
+    }
+    .hero-section h2 {
+        font-size: 1.8em;
+    }
+    .hero-section p {
+        font-size: 0.9em;
+    }
+    .hero-buttons .btn {
+        width: 80%; /* Make buttons full width */
+        display: block; /* Stack buttons */
+        margin: 10px auto;
+    }
+}

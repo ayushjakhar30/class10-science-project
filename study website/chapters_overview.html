@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Chapters - Science Class 10</title>
+  <link rel="stylesheet" href="ch1 style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-header {
+      background-color: #34495e;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .main-header .container {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .content-area {
+      padding: 40px 5%;
+    }
+
+    .chapter-intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .chapter-card {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chapter-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .chapter-card-header {
+      background-color: #34495e;
+      color: white;
+      padding: 15px 20px;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    .chapter-card-body {
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .chapter-card-body p {
+      font-size: 0.95em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .chapter-status {
+      font-size: 0.85em;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .status-complete {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .status-inprogress {
+      background-color: #fff3e0;
+      color: #ef6c00;
+    }
+
+    .chapter-card-footer {
+      background-color: #f7f9fb;
+      padding: 15px 20px;
+      text-align: right;
+      border-top: 1px solid #eee;
+    }
+
+    .btn {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 18px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    .main-footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .main-footer ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .main-footer ul li a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1>Science Hub</h1>
+      <nav>
+        <ul>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="ch1.html">Chapter 1</a></li>
+          <li><a href="reaction_types.html">Types of Reactions</a></li>
+          <li><a href="sst_chapters_overview.html">SST Chapters</a></li>
+          <li><a href="chapters_overview.html">Chapters</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Quiz</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="content-area">
+    <section class="chapter-intro">
+      <h2>All Chapters</h2>
+      <p class="chapter-tagline">Explore the fascinating world of science, chapter by chapter!</p>
+      <p>Here you can find all the chapters available in our Science Class 10 curriculum. Click on any chapter to dive deep into its concepts and examples.</p>
+    </section>
+
+    <section class="chapters-grid">
+      <!-- Inside <section class="chapters-grid"> -->
+<div class="chapters-grid">
+    <!-- Ch 1 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 1: Chemical Reactions & Equations</div>
+      <div class="chapter-card-body">
+        <p>Learn how chemical reactions occur, how to write and balance equations.</p>
+        <span class="chapter-status status-complete">Complete</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="ch1.html" class="btn">Read Chapter</a>
+      </div>
+    </div>
+  
+    <!-- Ch 2 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 2: Acids, Bases and Salts</div>
+      <div class="chapter-card-body">
+        <p>Explore the nature, reactions and importance of acids, bases, and salts.</p>
+        <span class="chapter-status status-complete">Complete</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="chapter2.html" class="btn">Read Chapter</a>
+      </div>
+    </div>
+  
+    <!-- Ch 3 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 3: Metals and Non-metals</div>
+      <div class="chapter-card-body">
+        <p>Understand the properties and reactivity of metals and non-metals.</p>
+        <span class="chapter-status status-complete">Complete</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="ch3.html" class="btn">Read Chapter</a>
+      </div>
+    </div>
+  
+    <!-- Ch 4 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 4: Carbon and Its Compounds</div>
+      <div class="chapter-card-body">
+        <p>Study the versatility of carbon, functional groups and important compounds.</p>
+        <span class="chapter-status status-inprogress">In Progress</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="#" class="btn">Coming Soon</a>
+      </div>
+    </div>
+  
+    <!-- Skipping Chapter 5 -->
+  
+    <!-- Ch 6 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 6: Life Processes</div>
+      <div class="chapter-card-body">
+        <p>Understand nutrition, respiration, transportation and excretion in organisms.</p>
+        <span class="chapter-status status-complete">complete</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="ch6.html" class="btn">read chapter</a>
+      </div>
+    </div>
+  
+    <!-- Ch 7 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 7: Control and Coordination</div>
+      <div class="chapter-card-body">
+        <p>Explore the nervous system, hormones and coordination in humans and plants.</p>
+        <span class="chapter-status status-inprogress">In Progress</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="#" class="btn">Coming Soon</a>
+      </div>
+    </div>
+  
+    <!-- Ch 8 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 8: How Do Organisms Reproduce?</div>
+      <div class="chapter-card-body">
+        <p>Learn about reproduction in organisms including humans and plants.</p>
+        <span class="chapter-status status-inprogress">In Progress</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="#" class="btn">Coming Soon</a>
+      </div>
+    </div>
+  
+    <!-- Ch 9 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 9: Heredity and Evolution</div>
+      <div class="chapter-card-body">
+        <p>Understand inheritance of traits and basic principles of evolution.</p>
+        <span class="chapter-status status-inprogress">In Progress</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="#" class="btn">Coming Soon</a>
+      </div>
+    </div>
+  
+    <!-- Ch 10 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 10: Light – Reflection and Refraction</div>
+      <div class="chapter-card-body">
+        <p>Dive into the laws of reflection, refraction, and lens behavior.</p>
+        <span class="chapter-status status-inprogress">In Progress</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="#" class="btn">Coming Soon</a>
+      </div>
+    </div>
+  
+    <!-- Ch 11 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 11: The Human Eye and the Colourful World</div>
+      <div class="chapter-card-body">
+        <p>Explore how we see, eye defects, dispersion, scattering and rainbows.</p>
+        <span class="chapter-status status-inprogress">In Progress</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="#" class="btn">Coming Soon</a>
+      </div>
+    </div>
+  
+    <!-- Ch 12 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 12: Electricity</div>
+      <div class="chapter-card-body">
+        <p>Understand current, voltage, resistance, Ohm’s law, and circuit analysis.</p>
+        <span class="chapter-status status-inprogress">In Progress</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="#" class="btn">Coming Soon</a>
+      </div>
+    </div>
+  
+    <!-- Ch 13 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 13: Magnetic Effects of Electric Current</div>
+      <div class="chapter-card-body">
+        <p>Learn magnetic fields, electromagnets, electric motor and generator.</p>
+        <span class="chapter-status status-inprogress">In Progress</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="#" class="btn">Coming Soon</a>
+      </div>
+    </div>
+  
+    <!-- Skipping Chapter 14 -->
+  
+    <!-- Ch 15 -->
+    <div class="chapter-card">
+      <div class="chapter-card-header">Chapter 15: Our Environment</div>
+      <div class="chapter-card-body">
+        <p>Understand ecosystem components, food chains, and environmental issues.</p>
+        <span class="chapter-status status-inprogress">In Progress</span>
+      </div>
+      <div class="chapter-card-footer">
+        <a href="#" class="btn">Coming Soon</a>
+      </div>
+    </div>
+  
+    <!-- Skipping Chapter 16 -->
+  </div>
+  

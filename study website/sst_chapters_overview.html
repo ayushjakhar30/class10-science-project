@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SST Chapters Overview - Class 10</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-header {
+      background-color: #34495e;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .main-header .container {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .content-area {
+      padding: 40px 5%;
+    }
+
+    .chapter-intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .concept-section {
+      margin-bottom: 40px;
+      /* Removed flex properties here as the grid will handle card layout */
+    }
+
+    .concept-section h2 {
+        font-family: 'Montserrat', sans-serif;
+        color: #34495e; /* Dark blue from header */
+        font-size: 2em;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: 700;
+        text-align: center; /* Center section headings */
+    }
+
+    /* New CSS for the grid container */
+    .sst-chapters-grid {
+      display: grid;
+      /* This creates columns that are at least 280px wide but will stretch to fill available space */
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px; /* Space between grid items (chapter cards) */
+      padding: 0 10px; /* Small horizontal padding for the grid if needed */
+      justify-items: center; /* Center items within their grid cells if they don't fill full width */
+    }
+
+    .chapter-card {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      /* margin-bottom is now handled by gap in the grid container for consistency */
+      
+      /* Removed width and max-width as grid handles sizing */
+      width: 100%; /* Ensure card takes full width of its grid cell */
+    }
+
+    .chapter-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .chapter-card-header {
+      background-color: #34495e;
+      color: white;
+      padding: 15px 20px;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    .chapter-card-body {
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .chapter-card-body p {
+      font-size: 0.95em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .chapter-status {
+      font-size: 0.85em;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .status-ready {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .status-inprogress {
+      background-color: #fff3e0;
+      color: #ef6c00;
+    }
+
+    .chapter-card-footer {
+      background-color: #f7f9fb;
+      padding: 15px 20px;
+      text-align: right;
+      border-top: 1px solid #eee;
+    }
+
+    .btn {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 18px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    .main-footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .main-footer ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .main-footer ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .next-steps {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .next-steps h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #34495e;
+      font-size: 1.8em;
+      margin-bottom: 25px;
+    }
+
+    .cta-buttons .primary-btn {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      margin: 0 10px;
+    }
+
+    .cta-buttons .primary-btn:hover {
+      background-color: #2980b9;
+    }
+
+    .cta-buttons .secondary-btn {
+      background-color: #ecf0f1;
+      color: #34495e;
+      border: 1px solid #bdc3c7;
+      margin: 0 10px;
+    }
+
+    .cta-buttons .secondary-btn:hover {
+      background-color: #d5dbdb;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .main-header .container {
+        flex-direction: column;
+      }
+      .main-header nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+      }
+      .main-header nav ul li {
+        margin: 5px 0;
+      }
+      .content-area {
+        padding: 20px 3%;
+      }
+      .chapter-card-header {
+        font-size: 1.1em;
+      }
+      .btn {
+        padding: 6px 12px;
+        font-size: 0.9em;
+      }
+      .menu-toggle {
+        display: block; /* Hamburger icon visible on mobile */
+      }
+      .main-header nav {
+          display: none; /* Hide nav by default on mobile */
+      }
+      .main-header nav.active { /* Class added by JS to show nav */
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 60px; /* Adjust based on header height */
+          left: 0;
+          width: 100%;
+          background-color: #2c3e50;
+          z-index: 1000;
+          padding: 20px 0;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      /* On smaller screens, the grid will automatically stack if minmax(280px, 1fr) results in only one column */
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <h1>SST Chapters</h1>
+      <div class="menu-toggle">&#9776;</div>
+      <nav>
+        <ul>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="sst_chapters_overview.html">SST Chapters</a></li>
+          <li><a href="chapters_overview.html">Science Chapters</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Quiz</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container content-area">
+
+      <section class="chapter-intro">
+        <h2>Social Science Chapters - Class 10</h2>
+        <p>Explore detailed notes and concepts for all chapters of Class 10 Social Science. Click on any chapter to learn more!</p>
+      </section>
+
+      <section class="concept-section">
+        <h2>History (India and the Contemporary World – II)</h2>
+        <div class="sst-chapters-grid">
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 1: The Rise of Nationalism in Europe</div>
+            <div class="chapter-card-body">
+              <p>Explore the growth of nationalism in 19th century Europe and its effects on world history.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 2: Nationalism in India</div>
+            <div class="chapter-card-body">
+              <p>Understand the role of Gandhi and the people’s movements in the freedom struggle.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 3: The Making of a Global World</div>
+            <div class="chapter-card-body">
+              <p>Examine the rise of global trade and its social, political, and economic effects.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 4: The Age of Industrialisation</div>
+            <div class="chapter-card-body">
+              <p>Explore how industrialisation transformed the world with factories, machines, and production.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 5: Print Culture and the Modern World</div>
+            <div class="chapter-card-body">
+              <p>Learn how print technology shaped modern society and political movements.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="concept-section">
+        <h2>Political Science (Democratic Politics – II)</h2>
+        <div class="sst-chapters-grid">
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 1: Power Sharing</div>
+            <div class="chapter-card-body">
+              <p>Learn about power distribution in democracies and the need for balance among communities.</p>
+              <span class="chapter-status status-ready">Read Now</span>
+            </div>
+            <div class="chapter-card-footer"><a href="political_science/power_sharing.html" class="btn">Read Now</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 2: Federalism</div>
+            <div class="chapter-card-body">
+              <p>Understand the federal system and how power is shared between central and state governments.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 3: Democracy and Diversity</div>
+            <div class="chapter-card-body">
+              <p>Explore how social divisions affect democracy and why inclusiveness matters.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 4: Gender, Religion and Caste</div>
+            <div class="chapter-card-body">
+              <p>Examine how different social groups interact with politics in India.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 6: Political Parties</div>
+            <div class="chapter-card-body">
+              <p>Understand the role, functions, and challenges of political parties in a democracy.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 7: Outcomes of Democracy</div>
+            <div class="chapter-card-body">
+              <p>Evaluate how democratic systems deliver justice, equality, and economic well-being.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 8: Challenges to Democracy</div>
+            <div class="chapter-card-body">
+              <p>Learn about the practical challenges and limitations faced by democracies.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="concept-section">
+        <h2>Geography (Contemporary India – II)</h2>
+        <div class="sst-chapters-grid">
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 1: Resources and Development</div>
+            <div class="chapter-card-body">
+              <p>Explore types of resources and sustainable development techniques.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 2: Forest and Wildlife Resources</div>
+            <div class="chapter-card-body">
+              <p>Understand biodiversity conservation and resource classification.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 3: Water Resources</div>
+            <div class="chapter-card-body">
+              <p>Learn about water scarcity, dams, and conservation methods in India.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 4: Agriculture</div>
+            <div class="chapter-card-body">
+              <p>Discover cropping patterns, types of farming, and the role of technology in agriculture.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 5: Minerals and Energy Resources</div>
+            <div class="chapter-card-body">
+              <p>Study different mineral types and conventional/non-conventional energy sources.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 6: Manufacturing Industries</div>
+            <div class="chapter-card-body">
+              <p>Learn about types, distribution, and impact of industries on the economy and environment.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 7: Lifelines of National Economy</div>
+            <div class="chapter-card-body">
+              <p>Understand transportation, communication, and trade in the Indian economy.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="concept-section">
+        <h2>Economics (Understanding Economic Development)</h2>
+        <div class="sst-chapters-grid">
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 1: Development</div>
+            <div class="chapter-card-body">
+              <p>Study development goals, income, and sustainability across different regions.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 2: Sectors of the Indian Economy</div>
+            <div class="chapter-card-body">
+              <p>Learn about the primary, secondary, and tertiary sectors and their contribution.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 3: Money and Credit</div>
+            <div class="chapter-card-body">
+              <p>Understand functions of money, credit systems, and role of banks.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 4: Globalisation and the Indian Economy</div>
+            <div class="chapter-card-body">
+              <p>Explore economic liberalisation, MNCs, and globalization's impact on India.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+
+          <div class="chapter-card">
+            <div class="chapter-card-header">Chapter 5: Consumer Rights</div>
+            <div class="chapter-card-body">
+              <p>Know your rights and responsibilities as a consumer and legal protection systems.</p>
+              <span class="chapter-status status-inprogress">Coming Soon</span>
+            </div>
+            <div class="chapter-card-footer"><a href="#" class="btn">Coming Soon</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="next-steps">
+        <h3>Ready to Learn More?</h3>
+        <div class="cta-buttons">
+          <a href="homepage.html" class="btn primary-btn">Back to Home</a>
+          <a href="chapters_overview.html" class="btn secondary-btn">Explore Science Chapters</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 Science & SST Hub. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // This script is for the mobile menu toggle (hamburger icon)
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('nav');
+
+      if (menuToggle && nav) {
+        menuToggle.addEventListener('click', function() {
+          nav.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3: Metals and Non-metals - Your Friendly Science Guide!</title>
+    <link rel="stylesheet" href="ch1 style.css"> <!-- Still linking your original CSS for global styles -->
+    <!-- New premium fonts for a fresh look! -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Premium Color Palette & Typography for a better vibe! --- */
+        body {
+            font-family: 'Poppins', sans-serif; /* Clean and modern for body text */
+            line-height: 1.7;
+            margin: 0; /* Let main handle overall padding */
+            color: #34495e; /* Deep Slate Blue for main text */
+            background-color: #f8f9fa; /* Soft off-white background */
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Comfortaa', cursive; /* Fun and friendly for headings */
+            color: #2c3e50; /* Even darker Slate Blue for headings */
+            margin-bottom: 15px;
+        }
+        b {
+            font-weight: 600; /* Slightly bolder for emphasis */
+            color: #e67e22; /* Warm Orange/Terracotta for general bolding */
+        }
+
+        /* --- Main Content Area Styling --- */
+        .content-area {
+            max-width: 960px; /* Slightly wider for a more spacious feel */
+            margin: 40px auto; /* Centered with top/bottom margin */
+            padding: 30px;
+            background-color: #ffffff; /* Pure white content background */
+            border-radius: 12px; /* Nicely rounded corners */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Soft, elegant shadow */
+        }
+
+        /* --- Concept Sections (Like your "Premium Color Plates") --- */
+        .concept-section {
+            background-color: #e8f6f8; /* Very light Teal for sections */
+            padding: 25px 30px; /* Generous padding */
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+            border-left: 6px solid #3498db; /* Vibrant Blue highlight border */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .concept-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* More pronounced hover effect */
+        }
+        .concept-section h2 {
+            color: #2980b9; /* Slightly darker blue for section titles */
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* --- Info Boxes within Sections --- */
+        .concept-box {
+            background-color: #f0f8ff; /* Even lighter blue for specific info boxes */
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #cceeff; /* Light blue border */
+            box-shadow: inset 0 1px 5px rgba(0,0,0,0.03); /* Inner subtle shadow */
+        }
+        .concept-box h4 {
+            color: #2c3e50; /* Headings within concept boxes */
+            font-size: 1.4em;
+            margin-top: 0;
+            border-bottom: 1px dashed #cfd8dc; /* Dotted line under sub-heading */
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* --- "Friend's Notes" Styling --- */
+        .friend-note {
+            background-color: #fffacd; /* A soft, pleasant yellow */
+            border-left: 5px solid #f39c12; /* Warm orange border */
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+            color: #8b4513; /* Dark brown text for contrast */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            line-height: 1.5;
+        }
+        .friend-note strong {
+            color: #e67e22; /* Make key phrases in notes stand out */
+        }
+
+        /* --- Equation Block Styling (The Star of the Show!) --- */
+        .equation-block {
+            background-color: #fbfcfd; /* Almost white, very subtle background */
+            border: 2px solid #afeeee; /* A light teal border */
+            padding: 25px; /* More padding for equations */
+            margin: 30px 0;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 1.1em; /* Slightly larger font for readability */
+            white-space: pre-wrap; /* Preserve spacing and line breaks */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow */
+            text-align: center; /* Center the equations */
+        }
+        .equation-block .reactant, .equation-block .product {
+            display: inline-block;
+            vertical-align: middle;
+            color: #333; /* Dark grey for chemical formulas */
+        }
+        .equation-block b {
+            color: #c0392b; /* Deep red for bold elements in formulas */
+            font-weight: 700;
+        }
+        .equation-block .plus {
+            font-weight: 700;
+            color: #9b59b6; /* Purple for the plus sign, making it stand out */
+            margin: 0 5px; /* Ensure space around plus */
+            font-size: 1.2em; /* Slightly larger plus */
+        }
+        .equation-block .arrow {
+            font-size: 28px; /* Bigger arrow size */
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 20px; /* Generous 2cm spacing around arrows */
+            color: #27ae60; /* Vibrant green for the reaction flow */
+            letter-spacing: 12px; /* Creates the long arrow effect */
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle arrow shadow */
+        }
+        .small-text {
+            font-size: 0.75em;
+            vertical-align: sub; /* For subscripts */
+            line-height: 0; /* Prevent line height issues */
+        }
+        .super-text { /* For superscripts like charges */
+            font-size: 0.75em;
+            vertical-align: super;
+            line-height: 0;
+        }
+
+        /* --- Footer (Using existing ch1 style.css, but ensuring it looks good) --- */
+        .main-footer {
+            background-color: #2c3e50;
+            color: #fdfdfd;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .main-footer ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+        .main-footer ul li a {
+            color: #fdfdfd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .main-footer ul li a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Science Hub</h1>
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="ch1.html">Chapter 1</a></li>
+                    <li><a href="reaction_types.html">Types of Reactions</a></li>
+                    <li><a href="sst_chapters_overview.html">SST Chapters</a></li>
+                    <li><a href="chapters_overview.html">Chapters</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Quiz</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-area">
+        <h1>Hey there, Future Scientist! 👋 Let's Demystify Chapter 3: Metals and Non-metals!</h1>
+        <p>Ever wondered why some things shine and conduct electricity, while others don't? Or how your mom's silver anklets turn black? Well, this chapter is all about cracking the code of two huge families of elements: <b>Metals</b> and <b>Non-metals</b>!</p>
+        <p>Think of it like learning about different types of superheroes! Each has their own unique powers (properties) and ways they interact with the world (reactions). Ready? Let's dive in!</p>
+
+        <section class="concept-section">
+            <h2>1. Meet the Superheroes: Physical Properties! ✨</h2>
+            <div class="friend-note">
+                <p><b>Friend's Note:</b> Imagine you're at a science fair, looking at different materials. How would you tell them apart just by looking and touching? That's what physical properties are all about!</p>
+            </div>
+
+            <div class="concept-box">
+                <h4>💪 The Mighty Metals:</h4>
+                <p>These guys are the show-offs! They're usually:
+                <ul>
+                    <li><b>Shiny (Lustrous):</b> Think of polished gold or silver. So glam!</li>
+                    <li><b>Malleable:</b> You can hammer them into thin sheets without breaking. Like making aluminum foil from a block of aluminum!</li>
+                    <li><b>Ductile:</b> You can stretch them into long, thin wires. Copper wires in your phone chargers are a perfect example.</li>
+                    <li><b>Good Conductors of Heat & Electricity:</b> That's why cooking pots are metal and electric wires are copper! They let energy pass right through.</li>
+                    <li><b>Sonorous:</b> They make a ringing sound when hit. Ever heard a temple bell? That's metal magic!</li>
+                    <li>Mostly <b>Solids</b> at room temperature (except our liquid friend, <b>Mercury</b>, used in old thermometers!).</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="concept-box">
+                <h4>👻 The Mysterious Non-metals:</h4>
+                <p>These are quite the opposite! They tend to be:
+                <ul>
+                    <li><b>Non-lustrous:</b> No shine here, usually dull (except <b>Iodine</b>, which surprisingly sparkles!).</li>
+                    <li><b>Brittle:</b> If you hammer them, they just break into pieces. Think of coal (carbon) – smash!</li>
+                    <li><b>Non-ductile:</b> Can't be drawn into wires.</li>
+                    <li><b>Poor Conductors of Heat & Electricity:</b> They're insulators! That's why plastic (made of carbon) covers electric wires. (But hey, <b>Graphite</b>, a form of carbon, is an exception and *does* conduct electricity – neat, right?)</li>
+                    <li><b>Non-sonorous:</b> No ringing sound. Just a dull thud.</li>
+                    <li>Can be <b>solids</b> (like Carbon, Sulfur), <b>liquids</b> (like Bromine), or <b>gases</b> (like Oxygen, Nitrogen) at room temp.</li>
+                </ul>
+                </p>
+            </div>
+        </section>
+
+        <section class="concept-section">
+            <h2>2. The Drama Unfolds: Chemical Properties of Metals! 💥</h2>
+            <p>Metals are quite reactive because they love to <b>lose electrons</b> to become stable, like giving away extra baggage to travel light! When they lose electrons, they form positive ions (cations).</p>
+
+            <div class="friend-note">
+                <p><b>Friend's Note:</b> Remember, chemical reactions are like "blind dates" between elements. They combine, break apart, or swap partners to form something new and more stable!</p>
+            </div>
+
+            <h3>A. Metals Meeting Oxygen (Oxidation Party!):</h3>
+            <p>When metals get cozy with oxygen (usually from the air), they form <b>metal oxides</b>. Most of these are <b>basic</b> in nature, meaning they react with acids. Some are super quick to react, others need a little heat or time.</p>
+            <div class="equation-block">
+                <span class="reactant">4<b>Na</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>O</b><span class="small-text">2</span>(g)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>Na</b><span class="small-text">2</span><b>O</b>(s)</span><br>
+                <small><i>(<b>Sodium</b> reacts so fast, it catches fire in air! Store it in oil, seriously!)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant">2<b>Mg</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>O</b><span class="small-text">2</span>(g)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>MgO</b>(s)</span><br>
+                <small><i>(<b>Magnesium</b> burns with a dazzling white flame when heated.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant">4<b>Al</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">3<b>O</b><span class="small-text">2</span>(g)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>Al</b><span class="small-text">2</span><b>O</b><span class="small-text">3</span>(s)</span><br>
+                <small><i>(<b>Aluminium</b> forms a thin, tough oxide layer that protects it from further corrosion – pretty clever!)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant">2<b>Cu</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>O</b><span class="small-text">2</span>(g)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>CuO</b>(s)</span><br>
+                <small><i>(When <b>Copper</b> is heated, it turns black due to copper oxide formation.)</i></small>
+            </div>
+            <div class="friend-note">
+                <p><b>Quick Tip:</b> Some metal oxides are "chameleons"! They're called <b>Amphoteric Oxides</b>. They can act as both basic and acidic oxides. <b>Aluminium oxide (Al<sub>2</sub>O<sub>3</sub>)</b> and <b>Zinc oxide (ZnO)</b> are classic examples. They can react with both acids AND bases!</p>
+            </div>
+
+
+            <h3>B. Metals Splashing in Water (Hydro-reactions!):</h3>
+            <p>Metals react with water, sometimes violently, sometimes gently. They form <b>metal hydroxides</b> (or oxides) and release super cool <b>hydrogen gas</b>!</p>
+            <div class="equation-block">
+                <span class="reactant">2<b>Na</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">2<b>H</b><span class="small-text">2</span><b>O</b>(l)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>NaOH</b>(aq)</span> <span class="plus"><b>+</b></span> <span class="product"><b>H</b><span class="small-text">2</span>(g)</span><br>
+                <small><i>(<b>Sodium</b> explodes in cold water – so, don't try this at home! Hydrogen released also catches fire.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant"><b>Mg</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">2<b>H</b><span class="small-text">2</span><b>O</b>(l)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>Mg(OH)</b><span class="small-text">2</span>(aq)</span> <span class="plus"><b>+</b></span> <span class="product"><b>H</b><span class="small-text">2</span>(g)</span><br>
+                <small><i>(<b>Magnesium</b> reacts with hot water, and the hydrogen bubbles stick to it, making it float.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant">2<b>Al</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">3<b>H</b><span class="small-text">2</span><b>O</b>(g)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>Al</b><span class="small-text">2</span><b>O</b><span class="small-text">3</span>(s)</span> <span class="plus"><b>+</b></span> <span class="product">3<b>H</b><span class="small-text">2</span>(g)</span><br>
+                <small><i>(Less reactive metals like <b>Aluminium</b> and <b>Iron</b> only react with steam (gaseous water) when heated.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant">3<b>Fe</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">4<b>H</b><span class="small-text">2</span><b>O</b>(g)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>Fe</b><span class="small-text">3</span><b>O</b><span class="small-text">4</span>(s)</span> <span class="plus"><b>+</b></span> <span class="product">4<b>H</b><span class="small-text">2</span>(g)</span><br>
+                <small><i>(<b>Iron</b>, too, needs steam to react.)</i></small>
+            </div>
+
+
+            <h3>C. Metals vs. Acids (Battle Royale!):</h3>
+            <p>When metals face off against dilute acids, they usually win by kicking out <b>hydrogen gas</b> and forming a <b>salt</b>. (Remember, very unreactive metals like gold don't even bother!)</p>
+            <div class="equation-block">
+                <span class="reactant"><b>Mg</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">2<b>HCl</b>(aq)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>MgCl</b><span class="small-text">2</span>(aq)</span> <span class="plus"><b>+</b></span> <span class="product"><b>H</b><span class="small-text">2</span>(g)</span><br>
+                <small><i>(<b>Magnesium</b> reacts vigorously with hydrochloric acid.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant"><b>Zn</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>H</b><span class="small-text">2</span><b>SO</b><span class="small-text">4</span>(aq)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>ZnSO</b><span class="small-text">4</span>(aq)</span> <span class="plus"><b>+</b></span> <span class="product"><b>H</b><span class="small-text">2</span>(g)</span><br>
+                <small><i>(Bubbles of hydrogen gas quickly form when <b>Zinc</b> meets sulfuric acid.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant"><b>Fe</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">2<b>HCl</b>(aq)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>FeCl</b><span class="small-text">2</span>(aq)</span> <span class="plus"><b>+</b></span> <span class="product"><b>H</b><span class="small-text">2</span>(g)</span><br>
+                <small><i>(<b>Iron</b> reacts, but a bit slower than zinc or magnesium.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant">2<b>Al</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">6<b>HCl</b>(aq)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>AlCl</b><span class="small-text">3</span>(aq)</span> <span class="plus"><b>+</b></span> <span class="product">3<b>H</b><span class="small-text">2</span>(g)</span><br>
+                <small><i>(<b>Aluminium</b> reacts with HCl, but its protective oxide layer can slow it down initially.)</i></small>
+            </div>
+
+            <h3>D. Metals Playing Displacement Games (Musical Chairs!):</h3>
+            <p>This is where the <b>reactivity series</b> comes in! It's like a ranking of who's the "strongest" metal. A more reactive metal can literally push out a less reactive metal from its salt solution and take its place!</p>
+            <div class="equation-block">
+                <span class="reactant"><b>Zn</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>CuSO</b><span class="small-text">4</span>(aq)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>ZnSO</b><span class="small-text">4</span>(aq)</span> <span class="plus"><b>+</b></span> <span class="product"><b>Cu</b>(s)</span><br>
+                <small><i>(<b>Zinc</b> is more reactive than <b>Copper</b>, so it kicks copper out of copper sulfate solution. The blue solution turns colorless, and reddish-brown copper is deposited!)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant"><b>Fe</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>CuSO</b><span class="small-text">4</span>(aq)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>FeSO</b><span class="small-text">4</span>(aq)</span> <span class="plus"><b>+</b></span> <span class="product"><b>Cu</b>(s)</span><br>
+                <small><i>(Similarly, <b>Iron</b> displaces <b>Copper</b>. Iron nails turn reddish-brown, and the solution fades from blue to light green.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant"><b>Mg</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>FeSO</b><span class="small-text">4</span>(aq)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>MgSO</b><span class="small-text">4</span>(aq)</span> <span class="plus"><b>+</b></span> <span class="product"><b>Fe</b>(s)</span><br>
+                <small><i>(<b>Magnesium</b> is even more reactive than <b>Iron</b>, so it can displace iron.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant"><b>Cu</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">2<b>AgNO</b><span class="small-text">3</span>(aq)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>Cu(NO</b><span class="small-text">3</span><b>)</b><span class="small-text">2</span>(aq)</span> <span class="plus"><b>+</b></span> <span class="product">2<b>Ag</b>(s)</span><br>
+                <small><i>(<b>Copper</b> is more reactive than <b>Silver</b>, so it displaces silver from silver nitrate. Copper turns silvery, and the solution turns blue!)</i></small>
+            </div>
+        </section>
+
+        <section class="concept-section">
+            <h2>3. The Introverts: Chemical Properties of Non-metals! 🤐</h2>
+            <p>Non-metals are generally less reactive than metals. They prefer to <b>gain or share electrons</b> to achieve stability, like borrowing or sharing notes with a friend.</p>
+
+            <h3>A. Non-metals Chilling with Oxygen:</h3>
+            <p>When non-metals hang out with oxygen, they form <b>non-metal oxides</b>. These are usually <b>acidic</b> (e.g., carbon dioxide in soda water) or sometimes <b>neutral</b>.</p>
+            <div class="equation-block">
+                <span class="reactant"><b>C</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>O</b><span class="small-text">2</span>(g)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>CO</b><span class="small-text">2</span>(g)</span><br>
+                <small><i>(Burning <b>Carbon</b> (like coal) in air produces carbon dioxide.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant"><b>S</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>O</b><span class="small-text">2</span>(g)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>SO</b><span class="small-text">2</span>(g)</span><br>
+                <small><i>(Burning <b>Sulfur</b> gives off a pungent smell of sulfur dioxide.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant"><b>N</b><span class="small-text">2</span>(g)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>O</b><span class="small-text">2</span>(g)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>NO</b>(g)</span><br>
+                <small><i>(<b>Nitrogen</b> and <b>Oxygen</b> react at high temperatures, like during lightning strikes, to form nitric oxide.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant">4<b>P</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">5<b>O</b><span class="small-text">2</span>(g)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>P</b><span class="small-text">2</span><b>O</b><span class="small-text">5</span>(s)</span><br>
+                <small><i>(<b>Phosphorus</b> reacts readily with oxygen to form phosphorus pentoxide.)</i></small>
+            </div>
+
+            <h3>B. Non-metals and Water/Acids:</h3>
+            <p>Here's a simple rule: Non-metals generally <b>don't react</b> with water or dilute acids. Why? Because they're looking to *gain* electrons, and neither water nor dilute acids are good at *giving* electrons away.</p>
+        </section>
+
+        <section class="concept-section">
+            <h2>4. The VIP List: Reactivity Series! 🏆</h2>
+            <div class="friend-note">
+                <p><b>Friend's Note:</b> Think of the reactivity series as a "popularity contest" among metals! The ones at the top are super popular and can easily "snatch away" partners (ions) from the less popular ones further down the list.</p>
+            </div>
+            <p>The <b>reactivity series</b> (or activity series) is just a list of metals arranged from most reactive to least reactive. It's super handy for predicting displacement reactions!</p>
+            <p><b>Top (Most Reactive):</b><br>
+            <b>Potassium (K) > Sodium (Na) > Calcium (Ca) > Magnesium (Mg) > Aluminium (Al) > Zinc (Zn) > Iron (Fe) > Lead (Pb)</b></p>
+            <p><b>Hydrogen (H)</b> (It's not a metal, but it's included as a reference point for acid reactions.)</p>
+            <p><b>Bottom (Least Reactive):</b><br>
+            <b>Copper (Cu) > Silver (Ag) > Gold (Au)</b></p>
+            <p>So, a metal higher up can kick out a metal lower down from its salt solution. Simple!</p>
+        </section>
+
+        <section class="concept-section">
+            <h2>5. How They Hook Up: Ionic vs. Covalent Bonds! 🤝</h2>
+            <p>Elements don't just react randomly; they form bonds to achieve stability (usually a full outer shell of electrons, like noble gases). The way they do it defines the type of bond!</p>
+
+            <h3>A. Ionic Bonds: The "Give and Take" Relationship (Metals + Non-metals):</h3>
+            <div class="friend-note">
+                <p><b>Friend's Note:</b> Imagine one friend has too many toys (electrons) and another has too few. The first friend GIVES away a toy, and the second friend TAKES it. Now, both are happy! That's how ionic bonds work – a complete transfer of electrons, forming oppositely charged ions that attract each other like magnets.</p>
+            </div>
+            <p><b>Ionic compounds</b> are formed when <b>electrons are completely transferred</b> from a metal (which loses electrons to become a positive ion/cation) to a non-metal (which gains electrons to become a negative ion/anion). The strong electrostatic force between these opposite charges holds the compound together.</p>
+            <div class="equation-block">
+                <span class="reactant"><b>Na</b></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>Na</b><span class="super-text">+</span></span> <span class="plus"><b>+</b></span> <span class="product"><b>e</b><span class="super-text">-</span></span> <br>
+                <span class="reactant"><b>Cl</b></span> <span class="plus"><b>+</b></span> <span class="reactant"><b>e</b><span class="super-text">-</span></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>Cl</b><span class="super-text">-</span></span> <br>
+                <span class="reactant"><b>Na</b><span class="super-text">+</span></span> <span class="plus"><b>+</b></span> <span class="reactant"><b>Cl</b><span class="super-text">-</span></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>NaCl</b></span><br>
+                <small><i>(Formation of everyday <b>Table Salt</b>!)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant"><b>Mg</b></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>Mg</b><span class="super-text">2+</span></span> <span class="plus"><b>+</b></span> <span class="product">2<b>e</b><span class="super-text">-</span></span> <br>
+                <span class="reactant"><b>O</b></span> <span class="plus"><b>+</b></span> <span class="reactant">2<b>e</b><span class="super-text">-</span></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>O</b><span class="super-text">2-</span></span> <br>
+                <span class="reactant"><b>Mg</b><span class="super-text">2+</span></span> <span class="plus"><b>+</b></span> <span class="reactant"><b>O</b><span class="super-text">2-</span></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>MgO</b></span><br>
+                <small><i>(<b>Magnesium Oxide</b>, used in antacids.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant"><b>Ca</b></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>Ca</b><span class="super-text">2+</span></span> <span class="plus"><b>+</b></span> <span class="product">2<b>e</b><span class="super-text">-</span></span> <br>
+                <span class="reactant">2<b>Cl</b></span> <span class="plus"><b>+</b></span> <span class="reactant">2<b>e</b><span class="super-text">-</span></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>Cl</b><span class="super-text">-</span></span> <br>
+                <span class="reactant"><b>Ca</b><span class="super-text">2+</span></span> <span class="plus"><b>+</b></span> <span class="reactant">2<b>Cl</b><span class="super-text">-</span></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>CaCl</b><span class="small-text">2</span></span><br>
+                <small><i>(<b>Calcium Chloride</b>, often used as a desiccant or road de-icer.)</i></small>
+            </div>
+            <div class="equation-block">
+                <span class="reactant"><b>Al</b></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>Al</b><span class="super-text">3+</span></span> <span class="plus"><b>+</b></span> <span class="product">3<b>e</b><span class="super-text">-</span></span> <br>
+                <span class="reactant">3<b>F</b></span> <span class="plus"><b>+</b></span> <span class="reactant">3<b>e</b><span class="super-text">-</span></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">3<b>F</b><span class="super-text">-</span></span> <br>
+                <span class="reactant"><b>Al</b><span class="super-text">3+</span></span> <span class="plus"><b>+</b></span> <span class="reactant">3<b>F</b><span class="super-text">-</span></span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>AlF</b><span class="small-text">3</span></span><br>
+                <small><i>(<b>Aluminium Fluoride</b>, an important component in aluminium smelting.)</i></small>
+            </div>
+
+            <div class="concept-box">
+                <h4>Cool Facts about Ionic Compounds:</h4>
+                <p>They're like tiny, super-organized crystals! That's why they have:
+                <ul>
+                    <li><b>High Melting & Boiling Points:</b> It takes a lot of energy to break those strong magnetic attractions!</li>
+                    <li>Often <b>Soluble in Water:</b> Water molecules (being polar) can pull the ions apart.</li>
+                    <li><b>Conduct Electricity in Molten State or Solution:</b> When melted or dissolved, their ions are free to move and carry charge – like tiny taxis for electricity!</li>
+                </ul>
+                </p>
+            </div>
+
+            <h3>B. Covalent Bonds: The "Sharing is Caring" Relationship (Non-metals + Non-metals):</h3>
+            <div class="friend-note">
+                <p><b>Friend's Note:</b> This is like two friends who both want to play with the same toy, so they decide to SHARE it. No one gives it away completely, they just make sure both can use it to be happy. That's how non-metals bond – by sharing electrons!</p>
+            </div>
+            <p><b>Covalent compounds</b> are formed when non-metals <b>share electrons</b> to achieve a stable electronic configuration. There's no transfer, just a mutual agreement to share electron pairs.</p>
+            <p><i>(While equations for covalent bond formation are less common in this context, think of everyday molecules like water (H<sub>2</sub>O) or carbon dioxide (CO<sub>2</sub>) – they're all covalent!)</i></p>
+        </section>
+
+        <section class="concept-section">
+            <h2>6. Digging for Treasure: Occurrence & Extraction of Metals! ⛏️</h2>
+            <div class="friend-note">
+                <p><b>Friend's Note:</b> Finding metals is like a treasure hunt! Some rare, unreactive metals are found "as is" (like finding a gold coin), while others are hidden inside rocks and need special processing to get them out (like digging for diamonds!).</p>
+            </div>
+
+            <h3>A. Where Do We Find Metals?</h3>
+            <ul>
+                <li><b>Free/Native State:</b> Super unreactive metals like <b>Gold (Au)</b>, <b>Platinum (Pt)</b>, and <b>Silver (Ag)</b> are found as pure elements because they don't react with anything easily.</li>
+                <li><b>Combined State (Minerals & Ores):</b> Most metals are found combined with other elements as compounds (like oxides, sulphides, carbonates) within rocks called <b>minerals</b>. A <b>mineral</b> from which a metal can be profitably extracted is called an <b>ore</b>. (All ores are minerals, but not all minerals are ores!)</li>
+            </ul>
+
+            <h3>B. Getting the Metal Out (Metallurgy is the word!):</h3>
+            <p>The whole process of extracting metals from their ores and refining them is called <b>metallurgy</b>. Different methods are used depending on how reactive the metal is.</p>
+            <div class="concept-box">
+                <h4>For Moderately Reactive Metals (like Zinc, Iron, Lead):</h4>
+                <p>Often found as carbonates or sulphides.
+                <br><b>Step 1: Convert to Oxide (easier to reduce!)</b>
+                <ul>
+                    <li><b>Roasting (for Sulphide ores):</b> Heating in excess air to convert to oxide.</li>
+                    <div class="equation-block">
+                        <span class="reactant">2<b>ZnS</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">3<b>O</b><span class="small-text">2</span>(g)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>ZnO</b>(s)</span> <span class="plus"><b>+</b></span> <span class="product">2<b>SO</b><span class="small-text">2</span>(g)</span><br>
+                        <small><i>(<b>Zinc sulphide</b> roasted to <b>Zinc oxide</b>.)</i></small>
+                    </div>
+                    <li><b>Calcination (for Carbonate ores):</b> Heating in limited air to convert to oxide.</li>
+                    <div class="equation-block">
+                        <span class="reactant"><b>ZnCO</b><span class="small-text">3</span>(s)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>ZnO</b>(s)</span> <span class="plus"><b>+</b></span> <span class="product"><b>CO</b><span class="small-text">2</span>(g)</span><br>
+                        <small><i>(<b>Zinc carbonate</b> calcined to <b>Zinc oxide</b>.)</i></small>
+                    </div>
+                </ul>
+                <br><b>Step 2: Reduction (getting the pure metal!)</b>
+                <ul>
+                    <li><b>Using Carbon (Coke):</b> Carbon is a cheap reducing agent!</li>
+                    <div class="equation-block">
+                        <span class="reactant"><b>ZnO</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>C</b>(s)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product"><b>Zn</b>(s)</span> <span class="plus"><b>+</b></span> <span class="product"><b>CO</b>(g)</span><br>
+                        <small><i>(<b>Zinc oxide</b> reduced by <b>carbon</b>.)</i></small>
+                    </div>
+                    <li><b>Displacement with more reactive metals (Thermite reaction - super cool!):</b> For metals like manganese or chromium, or even repairing railway tracks!</li>
+                    <div class="equation-block">
+                        <span class="reactant">2<b>Al</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant"><b>Fe</b><span class="small-text">2</span><b>O</b><span class="small-text">3</span>(s)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>Fe</b>(l)</span> <span class="plus"><b>+</b></span> <span class="product"><b>Al</b><span class="small-text">2</span><b>O</b><span class="small-text">3</span>(s)</span> <span class="plus"><b>+</b></span> <span class="product"><b>Heat</b></span><br>
+                        <small><i>(Molten <b>Iron</b> is produced, hot enough to join tracks!)</i></small>
+                    </div>
+                </ul>
+                </p>
+            </div>
+
+            <div class="concept-box">
+                <h4>For Highly Reactive Metals (like Sodium, Aluminium):</h4>
+                <p>These metals hold onto their oxygen or other partners super tightly! Carbon can't easily reduce them. So, we use **electrolytic reduction** (fancy word for using electricity to break bonds!).</p>
+                <div class="equation-block">
+                    <span class="reactant">2<b>NaCl</b>(l)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;<span class="small-text">electricity</span>&mdash;&mdash;&mdash;></span> <span class="product">2<b>Na</b>(s)</span> <span class="plus"><b>+</b></span> <span class="product"><b>Cl</b><span class="small-text">2</span>(g)</span><br>
+                    <small><i>(Molten <b>Sodium Chloride</b> is broken down. <b>Sodium</b> forms at the cathode, <b>Chlorine gas</b> at the anode.)</i></small><br>
+                    <small><i>(At Cathode: <b>Na</b><span class="super-text">+</span> <span class="plus"><b>+</b></span> <b>e</b><span class="super-text">-</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <b>Na</b>)</i></small>
+                </div>
+            </div>
+
+            <div class="concept-box">
+                <h4>For Least Reactive Metals (like Gold, Silver):</h4>
+                <p>These are often found in their native (free) state! No complex extraction needed, just some purification.</p>
+            </div>
+        </section>
+
+        <section class="concept-section">
+            <h2>7. The Enemy: Corrosion! 👻</h2>
+            <div class="friend-note">
+                <p><b>Friend's Note:</b> Ever seen an old bicycle chain getting rusty or your silver jewelry losing its shine? That's corrosion in action! It's like a slow, destructive chemical attack on metals by their environment.</p>
+            </div>
+            <p><b>Corrosion</b> is the slow, gradual destruction of metals by the action of air, moisture, or chemicals on their surface. The most famous type is <b>Rusting</b>, which affects iron.</p>
+
+            <h3>A. The Case of Rust (Iron's Arch Nemesis):</h3>
+            <p>Rusting happens when <b>Iron</b> reacts with <b>Oxygen</b> (from air) and <b>Water</b> (moisture). It forms reddish-brown flaky substance called <b>hydrated iron(III) oxide</b> (the rust!).</p>
+            <div class="equation-block">
+                <span class="reactant">4<b>Fe</b>(s)</span> <span class="plus"><b>+</b></span> <span class="reactant">3<b>O</b><span class="small-text">2</span>(g)</span> <span class="plus"><b>+</b></span> <span class="reactant">2<b>xH</b><span class="small-text">2</span><b>O</b>(l)</span> <span class="arrow">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;></span> <span class="product">2<b>Fe</b><span class="small-text">2</span><b>O</b><span class="small-text">3</span> &middot; <b>xH</b><span class="small-text">2</span><b>O</b>(s)</span><br>
+                <small>(This is the chemical formula for <b>Rust</b>! 'x' means variable number of water molecules.)</small>
+            </div>
+            <p>Other examples of corrosion:
+            <ul>
+                <li><b>Silver articles</b> turn black due to reaction with hydrogen sulphide in the air, forming silver sulphide.</li>
+                <li><b>Copper articles</b> turn green (or greenish-blue) due to reaction with moist carbon dioxide in the air, forming basic copper carbonate.</li>
+            </ul></p>
+
+            <h3>B. Fighting Back: Preventing Corrosion! 🛡️</h3>
+            <p>Good news! We can protect metals!
+            <ul>
+                <li><b>Painting/Oiling/Greasing:</b> Simple physical barriers to keep air and moisture away.</li>
+                <li><b>Galvanizing:</b> Coating iron with a layer of more reactive <b>Zinc</b>. Even if the zinc coating is scratched, the zinc sacrifices itself to protect the iron (called sacrificial protection!).</li>
+                <li><b>Electroplating:</b> Coating a metal with another non-corrosive metal (like chromium or nickel).</li>
+                <li><b>Anodising:</b> Thickening the natural oxide layer on aluminum (like the protective layer mentioned earlier).</li>
+                <li><b>Making Alloys:</b> Mixing metals with other metals or non-metals to create a new material with improved properties. Stainless steel (iron + chromium + nickel) is a famous example – it resists rust!</li>
+            </ul>
+            </p>
+        </section>
+
+        <section class="next-steps">
+            <h3>Phew! You made it! 🎉</h3>
+            <p>That was a lot, but now you've got a super solid grasp on Chapter 3! Remember, science is all about observing, understanding, and connecting things to the world around you.</p>
+            <p>Keep exploring, keep questioning, and let's conquer the next chapter together!</p>
+            <div class="cta-buttons">
+                <a href="chapters_overview.html" class="btn primary-btn">Back to Chapters</a>
+                <a href="#" class="btn secondary-btn">Try a Quiz!</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 Science Hub. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
